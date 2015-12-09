@@ -26,7 +26,8 @@ Rails.application.routes.draw do
   #     end
   #   end
 
-  resources :callback, only: [:index]
+  get '/callback', to: 'callback#index'
+  get '/callback/calling', to: 'callback#calling'
 
   # Example resource route with sub-resources:
   #   resources :products do

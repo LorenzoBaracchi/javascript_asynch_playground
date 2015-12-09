@@ -7,4 +7,10 @@ RSpec.describe CallbackController, type: :controller do
     expect(response).to have_http_status(:ok)
   end
 
+  it 'should render a JavaScript callback' do
+    get :calling, formats: [:js]
+
+    expect(response.body).to eq('endOfExec();')
+  end
+
 end
