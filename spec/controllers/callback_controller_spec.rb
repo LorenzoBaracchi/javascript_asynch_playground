@@ -13,4 +13,9 @@ RSpec.describe CallbackController, type: :controller do
     expect(response.body).to eq('endOfExec();')
   end
 
+  it 'should show compute' do
+    get :compute
+    expect(response).to have_http_status(:ok)
+  end
+
 end

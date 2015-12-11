@@ -11,4 +11,14 @@ class CallbackController < ApplicationController
     render js: 'endOfExec();'
   end
 
+  def compute
+    respond_to do |format|
+      format.html
+      format.js {
+        result = Computator.new().solve(params[:q])
+        render js: result.to_s
+      }
+    end
+  end
+
 end

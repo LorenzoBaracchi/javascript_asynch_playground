@@ -1,0 +1,18 @@
+<h1> Compute </h2>
+
+<textarea id="operation"></textarea>
+<button id="doit">Do it</button>
+
+<script type="text/JavaScript">
+  $( document ).ready(function() {
+    $("#doit").click(function(){
+      var operation = encodeURIComponent($("#operation").val());
+
+      $.ajax({url: "/callback/compute.js?q="+operation,})
+       .done(function( data ) {
+         $("#operation").val(data)
+       });
+
+    });
+  });
+</script>
