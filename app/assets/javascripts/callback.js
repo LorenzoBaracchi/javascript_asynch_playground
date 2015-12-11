@@ -11,7 +11,8 @@ $( document ).ready(function() {
 
 
 function endOfExec() {
+  $('#container').append("<p>I'm called by the server!</p>");
   window.setTimeout(function(){
-    $('#container').append("<p>I'm called by the server!</p>");
+    $('#container').append("<p>after timeout</p>");
   }, 2000);
 }
