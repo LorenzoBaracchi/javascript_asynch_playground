@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   get '/callback/calling', to: 'callback#calling'
   get '/callback/compute', to: 'callback#compute'
 
+  get 'listen', to: 'listen#index'
+
 
   # Example resource route with sub-resources:
   #   resources :products do
