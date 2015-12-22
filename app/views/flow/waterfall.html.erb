@@ -1,0 +1,18 @@
+<h1>Flowing</h1>
+
+<div id="results">
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  async.waterfall(
+    [
+      function(callback) {compute("1+2", callback);},
+      function(data, callback) {computedelay(data+"+5", callback);},
+      function(data, callback) {compute(data+"-3", callback);}
+    ],
+    function(err, data){
+      $("#results").append("<p>"+data+"</p>");
+    });
+});
+</script>

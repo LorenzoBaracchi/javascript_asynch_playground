@@ -32,6 +32,13 @@ Rails.application.routes.draw do
 
   get 'listen', to: 'listen#index'
 
+  get 'flow/series', to: 'flow#series'
+  get 'flow/parallel', to: 'flow#parallel'
+  get 'flow/waterfall', to: 'flow#waterfall'
+  get '/flow/compute', to: 'flow#compute'
+  get '/flow/computedelay', to: 'flow#computedelay'
+
+
 
   # Example resource route with sub-resources:
   #   resources :products do
