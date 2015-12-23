@@ -35,10 +35,10 @@ Rails.application.routes.draw do
   get 'flow/series', to: 'flow#series'
   get 'flow/parallel', to: 'flow#parallel'
   get 'flow/waterfall', to: 'flow#waterfall'
-  get '/flow/compute', to: 'flow#compute'
-  get '/flow/computedelay', to: 'flow#computedelay'
+  get 'flow/compute', to: 'flow#compute'
+  get 'flow/computedelay', to: 'flow#computedelay'
 
-
+  get 'promise/why', to: 'promise#why'
 
   # Example resource route with sub-resources:
   #   resources :products do
