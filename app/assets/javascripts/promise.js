@@ -1,3 +1,8 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$( document ).ready(function() {
+  console.log("document ready fired");
+  $('#change').text($('#change').text()+ " modified with promise!");
+  $.ajax('/promise/script');
+});
+
+
+var promise = Promise.resolve($(document).ready());

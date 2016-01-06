@@ -1,0 +1,24 @@
+<h1>Why promises</h1>
+
+
+<p id="onready">
+  Some text
+</p>
+
+<p id="change_promise">
+  Some other text
+</p>
+
+<p>
+  <%= link_to 'back', promise_path %>
+</p>
+
+<script>
+promise.then(function(value) {
+  console.log("document ready promise");
+  $('#change_promise').text($('#change_promise').text()+ " modified with promise!");
+  $.ajax('/promise/script');
+}, function(value) {
+  console.log('error');
+});
+</script

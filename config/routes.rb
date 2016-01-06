@@ -38,7 +38,10 @@ Rails.application.routes.draw do
   get 'flow/compute', to: 'flow#compute'
   get 'flow/computedelay', to: 'flow#computedelay'
 
+  get 'promise', to: 'promise#index'
   get 'promise/why', to: 'promise#why'
+  get 'promise/why2', to: 'promise#why2'
+  get 'promise/script', to: 'promise#script'
 
   # Example resource route with sub-resources:
   #   resources :products do
