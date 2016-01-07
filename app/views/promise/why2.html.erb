@@ -14,6 +14,8 @@
 </p>
 
 <script>
+var promise = Promise.resolve($(document).ready());
+
 promise.then(function(value) {
   console.log("document ready promise");
   $('#change_promise').text($('#change_promise').text()+ " modified with promise!");
