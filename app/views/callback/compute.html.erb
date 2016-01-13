@@ -8,7 +8,7 @@
     $("#doit").click(function(){
       var operation = encodeURIComponent($("#operation").val());
 
-      $.ajax({url: "/callback/compute.js?q="+operation,})
+      $.ajax({url: "/callback/compute.js?q="+operation})
        .done(function( data ) {
          $("#operation").val(data)
        });
